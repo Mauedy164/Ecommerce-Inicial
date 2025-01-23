@@ -5,6 +5,7 @@ import icono from "../images/Masajes/masaje-facial.png";
 export function CartProduct({
   emoji,
   title,
+  description,
   duration,
   objetive,
   technique,
@@ -14,6 +15,56 @@ export function CartProduct({
   return (
     <div className="card-container">
       <div className="emoji-container">
+        <img src={icono} alt="" className="emoji" />
+      </div>
+      <div className="title-container">
+        <h3 className="title">{title}</h3>
+        <p className="title-description">
+          {description}
+        </p>
+      </div>
+      <div className="description-container">
+        <p>
+          <strong>OBJETIVO: </strong> {objetive}
+        </p>
+        <p>
+          <strong>TÉCNICA USADA: </strong> {technique}
+        </p>
+        <p>
+          <strong>
+            BENEFICIOS: </strong> 
+            {benefits}
+          
+        </p>
+        <p>
+          <strong>DURACIÓN: </strong> {duration}
+        </p>
+        <p>
+          <strong>PRECIO: </strong> ${price}
+        </p>
+        <button className="addCart-btn">Agregar al carrito</button>
+      </div>
+    </div>
+  );
+}
+
+{
+  /*         <div className="emoji-container">
+                <p className="emoji">{emoji}</p>
+            </div>
+            <div className="title-container">
+                <h3>{title}</h3>
+            </div>
+            <div className="description-container">
+                <p>Objetivo: {objetive}</p>
+                <p>Técnica usada: {technique}</p>
+                <p>Beneficios: {benefits}</p>
+                <p>Duración: {duration}</p>
+                <p>Precio: {price}</p>
+            </div> */
+}
+
+/* <div className="emoji-container">
         <img src={icono} alt="" className="emoji" />
       </div>
       <div className="title-container">
@@ -44,23 +95,4 @@ export function CartProduct({
           <strong>PRECIO:</strong> $50
         </p>
         <button className="addCart-btn">Agregar al carrito</button>
-      </div>
-    </div>
-  );
-}
-
-{
-  /*         <div className="emoji-container">
-                <p className="emoji">{emoji}</p>
-            </div>
-            <div className="title-container">
-                <h3>{title}</h3>
-            </div>
-            <div className="description-container">
-                <p>Objetivo: {objetive}</p>
-                <p>Técnica usada: {technique}</p>
-                <p>Beneficios: {benefits}</p>
-                <p>Duración: {duration}</p>
-                <p>Precio: {price}</p>
-            </div> */
-}
+      </div> */
