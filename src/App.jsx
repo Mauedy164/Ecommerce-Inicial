@@ -1,20 +1,22 @@
 import './App.css'
 import { Nabvar } from './components/Navbar'
+import { CartProduct } from './components/CartProducts'
 
 function App() {
   return (
     
-    <main>
+    <div className='complete-page'>
       <div className='navbar-container'>
         <Nabvar/>
       </div>
       <div className='products-main-container'>
+        <CartProduct/>
 
       </div>
       <div className='footer-container'>
 
       </div>
-    </main>
+    </div>
   )
 }
 
