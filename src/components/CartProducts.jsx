@@ -3,7 +3,8 @@ import "../styles/CartProducts.css";
 import icono from "../images/Masajes/masaje-facial.png";
 
 export function CartProduct({
-  emoji,
+  id,
+  image,
   title,
   description,
   duration,
@@ -11,6 +12,7 @@ export function CartProduct({
   technique,
   benefits,
   price,
+  category
 }) {
   return (
     <div className="card-container">
@@ -37,7 +39,7 @@ export function CartProduct({
           
         </p>
         <p>
-          <strong>DURACIÓN: </strong> {duration}
+          <strong>DURACIÓN: </strong> {duration} minutos
         </p>
         <p>
           <strong>PRECIO: </strong> ${price}

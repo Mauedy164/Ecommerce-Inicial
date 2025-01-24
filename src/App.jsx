@@ -1,8 +1,24 @@
 import './App.css'
 import { Nabvar } from './components/Navbar'
 import { CartProduct } from './components/CartProducts'
+import serviciosFisioterapia from '../data';
 
 function App() {
+  const list = serviciosFisioterapia.map(({id, image,
+    title,description,duration,objetive,technique,benefits,price,category}) => 
+    <CartProduct 
+    id={id}
+    image={image}
+    title= {title}
+    description={description}
+    duration={duration}
+    objetive={objetive}
+    technique={technique}
+    benefits={benefits}
+    price={price}
+    category={category}
+    />)
+
   return (
     
     <div className='complete-page'>
@@ -10,17 +26,7 @@ function App() {
         <Nabvar/>
       </div>
       <div className='products-main-container'>
-        <CartProduct
-        title = 'Masaje relajante'
-        objetive = 'Masaje perfecto para quien busque relajarse'
-        technique = 'Movimientos suaves y largos'
-        benefits= 'Reducción del estrés, mejora del sueño y relajación general'
-        duration= '60 minutos'
-        price='500'/>
-        <CartProduct/>
-        <CartProduct/>
-        <CartProduct/>
-        <CartProduct/>
+        {list}
 
       </div>
       <div className='footer-container'>
