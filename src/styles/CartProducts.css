@@ -4,7 +4,7 @@
     background-color:rgba(191, 123, 255, 0.63);
     max-width: 25%;
     min-width: 300px;
-    max-height: 600px;
+    min-height: 200px;
     border-radius: 15px 15px 0 0;
     color: white;
     display: grid;
@@ -38,6 +38,7 @@
 
 .title-description{
     font-size: 20px;
+    padding: 2px;
 }
 
 .description-container{

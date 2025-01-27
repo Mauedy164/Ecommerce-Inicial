@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../images/logo-m.png";
 import { LuShoppingCart } from "react-icons/lu";
 import '../styles/Navbar.css'
+import { Services } from "./Services";
+
 
 export function Nabvar() {
   return (
@@ -11,7 +13,7 @@ export function Nabvar() {
           <img src={logo} alt="logo fisioterapeuta M" id="logo" />
         </div>
         <div className="filter-products-container">
-          <p>Servicios</p>
+          <Services/>
           <p>Contacto</p>
           <p>Redes sociales</p>
         </div>
