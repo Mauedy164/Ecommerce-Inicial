@@ -18,22 +18,20 @@ import serviciosFisioterapia from "../data";
 import { HomePage } from "./components/Pages/Home";
 import { AboutMe } from "./components/Pages/AboutMe";
 import { Contact } from "./components/Pages/Contact";
-import { Services } from "./components/ServicesNavbar";
 import { CardProductsList } from "./components/CardProducts/CardProductsList";
+import { ProductDetails } from "./components/CardProducts/ProductDetails";
+
 
 function App() {
-
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage></HomePage>} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/AboutMe" element={<AboutMe />} />
-
-
         <Route path="/CardProductsList" element={<CardProductsList />} />
-
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );

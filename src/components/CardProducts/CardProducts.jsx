@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/CardProducts.css";
 import icono from "../../images/Masajes/masaje-facial.png";
+import { useNavigate } from 'react-router-dom';
 
 export function CardProduct({
   id,
@@ -14,6 +15,13 @@ export function CardProduct({
   price,
   category
 }) {
+
+  const navigate = useNavigate();
+
+  const handleDetailsClick = () => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="card-container">
       <div className="emoji-container">
@@ -44,7 +52,7 @@ export function CardProduct({
         <p>
           <strong>PRECIO: </strong> ${price}
         </p>
-        <button className="detailsProduct-btn">Detalles del producto</button>
+        <button className="detailsProduct-btn" onClick={handleDetailsClick}>Detalles del producto</button>
       </div>
     </div>
   );
