@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/CartProducts.css";
-import icono from "../images/Masajes/masaje-facial.png";
+import "../../styles/CardProducts.css";
+import icono from "../../images/Masajes/masaje-facial.png";
 
-export function CartProduct({
+export function CardProduct({
   id,
   image,
   title,
@@ -44,7 +44,7 @@ export function CartProduct({
         <p>
           <strong>PRECIO: </strong> ${price}
         </p>
-        <button className="addCart-btn">Agregar al carrito</button>
+        <button className="detailsProduct-btn">Detalles del producto</button>
       </div>
     </div>
   );

@@ -1,12 +1,23 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+
+//Componentes
 import { Nabvar } from './components/Navbar'
-import { CartProduct } from './components/CartProducts'
+import { CardProduct } from './components/CardProducts/CardProducts'
+
+//Datos
 import serviciosFisioterapia from '../data';
+
+//Páginas
+
+import { HomePage } from './components/Pages/Home';
+import { AboutMe } from './components/Pages/AboutMe';
+import {Contact} from './components/Pages/Contact';
 
 function App() {
   const list = serviciosFisioterapia.map(({id, image,
     title,description,duration,objetive,technique,benefits,price,category}) => 
-    <CartProduct 
+    <CardProduct 
     id={id}
     image={image}
     title= {title}
