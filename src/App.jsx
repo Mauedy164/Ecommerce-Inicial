@@ -1,50 +1,45 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
 //Componentes
-import { Nabvar } from './components/Navbar'
-import { CardProduct } from './components/CardProducts/CardProducts'
+import { Navbar } from "./components/Navbar";
+import { CardProduct } from "./components/CardProducts/CardProducts";
 
 //Datos
-import serviciosFisioterapia from '../data';
+import serviciosFisioterapia from "../data";
 
 //Páginas
 
-import { HomePage } from './components/Pages/Home';
-import { AboutMe } from './components/Pages/AboutMe';
-import {Contact} from './components/Pages/Contact';
+import { HomePage } from "./components/Pages/Home";
+import { AboutMe } from "./components/Pages/AboutMe";
+import { Contact } from "./components/Pages/Contact";
+import { Services } from "./components/ServicesNavbar";
+import { CardProductsList } from "./components/CardProducts/CardProductsList";
 
 function App() {
-  const list = serviciosFisioterapia.map(({id, image,
-    title,description,duration,objetive,technique,benefits,price,category}) => 
-    <CardProduct 
-    id={id}
-    image={image}
-    title= {title}
-    description={description}
-    duration={duration}
-    objetive={objetive}
-    technique={technique}
-    benefits={benefits}
-    price={price}
-    category={category}
-    />)
 
   return (
-    
-    <div className='complete-page'>
-      <div className='navbar-container'>
-        <Nabvar/>
-      </div>
-      <div className='products-main-container'>
-        {list}
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage></HomePage>} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/AboutMe" element={<AboutMe />} />
 
-      </div>
-      <div className='footer-container'>
 
-      </div>
-    </div>
-  )
+        <Route path="/CardProductsList" element={<CardProductsList />} />
+
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
+
+
+//De momento usaremos servicesNavbar para enviar a serivicios, depués haremos que se divida por categorias
