@@ -6,6 +6,7 @@ import { Services } from "./ServicesNavbar";
 import { Link } from "react-router-dom";
 import { HomePage } from "./Pages/Home";
 
+// ... otros imports
 export function Navbar() {
   return (
     <>
@@ -16,8 +17,7 @@ export function Navbar() {
           </Link>
         </div>
         <div className="filter-products-container">
-          <Link to='/CardProductsList'><Services /></Link>
-
+          <Services />
           <Link to="/Contact">
             <p>Contacto</p>
           </Link>
