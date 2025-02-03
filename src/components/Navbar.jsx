@@ -6,7 +6,7 @@ import { Services } from "./ServicesNavbar";
 import { Link } from "react-router-dom";
 import { HomePage } from "./Pages/Home";
 
-// ... otros imports
+
 export function Navbar() {
   return (
     <>

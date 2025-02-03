@@ -9,6 +9,7 @@ import {
 //Componentes
 import { Navbar } from "./components/Navbar";
 import { CardProduct } from "./components/CardProducts/CardProducts";
+import { CartProvider } from './context/CartContext';
 
 //Datos
 import serviciosFisioterapia from "../data";
@@ -38,6 +39,3 @@ function App() {
 }
 
 export default App;
-
-
-//De momento usaremos servicesNavbar para enviar a serivicios, depués haremos que se divida por categorias
