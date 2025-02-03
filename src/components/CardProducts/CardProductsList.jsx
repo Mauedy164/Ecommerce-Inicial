@@ -2,6 +2,7 @@ import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { CardProduct } from "./CardProducts";
 import serviciosFisioterapia from '../../../data';
+import '../../styles/CardProductsList.css'
 
 export function CardProductsList() {
     const [searchParams] = useSearchParams();

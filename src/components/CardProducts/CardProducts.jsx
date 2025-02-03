@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/CardProducts.css";
 import icono from "../../images/Masajes/masaje-facial.png";
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 export function CardProduct({
   id,
@@ -15,15 +16,21 @@ export function CardProduct({
   price,
   category
 }) {
+  
+
+  const { addToCart } = useCart();
   const navigate = useNavigate();
 
   const handleDetailsClick = () => {
     navigate(`/product/${id}`);
   };
+  
 
   // Función para manejar el evento de agregar al carrito
+  
   const handleAddToCart = () => {
-    console.log(`Producto ${title} agregado al carrito`);
+    addToCart({ id, title, price });
+
     // Aquí puedes implementar la lógica para agregar el producto al carrito
   };
 
@@ -45,9 +52,14 @@ export function CardProduct({
         <p>
           <strong>PRECIO: </strong> ${price}
         </p>
-        <button className="detailsProduct-btn" onClick={handleDetailsClick}>Detalles del producto</button>
-        {/* Botón de Agregar al Carrito */}
-        <button className="add-to-cart-btn" onClick={handleAddToCart}>Agregar al carrito</button>
+        <div className="button-container">
+    <button className="detailsProduct-btn" onClick={handleDetailsClick}>
+      Detalles del producto
+    </button>
+    <button className="add-to-cart-btn" onClick={handleAddToCart}>
+      Agregar al carrito
+    </button>
+  </div>
       </div>
     </div>
   );

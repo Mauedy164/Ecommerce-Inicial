@@ -1,14 +1,16 @@
-/* Estilos generales para la tarjeta */
+/* Estilos generales para la tarjeta - MODIFICADO PARA GRID */
 .card-container {
   background: #ffffff;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 350px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  width: 100%; /* Aseguramos que ocupe todo el ancho del contenedor grid */
+  height: 100%; /* Para igualar altura en la misma fila */
+  display: flex;
+  flex-direction: column;
 }
 
 .card-container:hover {
@@ -16,10 +18,12 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
+/* Eliminamos el max-width y margin auto original */
 /* Contenedor del ícono */
 .emoji-container {
   text-align: center;
   margin-bottom: 1.5rem;
+  flex-shrink: 0;
 }
 
 .emoji {
@@ -37,6 +41,7 @@
 .title-container {
   text-align: center;
   margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .title {
@@ -57,7 +62,7 @@
   background: #f9f9f9;
   border-radius: 10px;
   padding: 1.2rem;
-  margin-top: 1rem;
+  margin-top: auto; /* Empuja el contenido hacia abajo */
 }
 
 .description-container p {
@@ -72,6 +77,14 @@
   font-weight: 600;
 }
 
+/* Botones container - NUEVA SECCIÓN */
+.button-container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 /* Botón "Detalles del producto" */
 .detailsProduct-btn {
   background: #007bff;
@@ -83,7 +96,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  margin-top: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -106,7 +118,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  margin-top: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -121,6 +132,10 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .card-container {
-    max-width: 100%;
+    max-width: none;
+  }
+  
+  .title {
+    font-size: 1.3rem;
   }
 }

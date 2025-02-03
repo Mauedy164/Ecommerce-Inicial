@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../images/logo-m.png";
 import { LuShoppingCart } from "react-icons/lu";
 import "../styles/Navbar.css";
 import { Services } from "./ServicesNavbar";
 import { Link } from "react-router-dom";
-import { HomePage } from "./Pages/Home";
-
+import { useCart } from '../context/CartContext';
 
 export function Navbar() {
+  const { totalItems } = useCart();
+
   return (
     <>
       <div className="navbar-container">
@@ -26,8 +27,10 @@ export function Navbar() {
           </Link>
         </div>
         <div className="cart-container">
-          <LuShoppingCart className="carrito" />
-          <p>Agendar cita</p>
+          <Link to="/cart" className="cart-link">
+            <LuShoppingCart className="carrito" />
+            {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
+          </Link>
         </div>
       </div>
     </>
