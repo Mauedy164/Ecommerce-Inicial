@@ -1,15 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-//Componentes
+
 import { Navbar } from "./components/Navbar";
 import { CardProduct } from "./components/CardProducts/CardProducts";
 import { CartProvider } from './context/CartContext';
 
-//Datos
+
 import serviciosFisioterapia from "../data";
 
-//Páginas
+
 
 import { HomePage } from "./components/Pages/Home";
 import { AboutMe } from "./components/Pages/AboutMe";

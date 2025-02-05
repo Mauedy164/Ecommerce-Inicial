@@ -26,12 +26,12 @@ export function CardProduct({
   };
   
 
-  // Función para manejar el evento de agregar al carrito
+  
   
   const handleAddToCart = () => {
     addToCart({ id, title, price });
 
-    // Aquí puedes implementar la lógica para agregar el producto al carrito
+    
   };
 
   return (

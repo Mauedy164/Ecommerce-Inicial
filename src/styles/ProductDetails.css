@@ -1,4 +1,4 @@
-/* ProductDetails.css */
+
 .product-details {
     max-width: 1000px;
     margin: 40px auto;
@@ -80,7 +80,7 @@
     margin-right: 10px;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .product-details {
         margin: 20px;
@@ -101,7 +101,7 @@
     }
 }
 
-/* Animaciones de entrada */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
