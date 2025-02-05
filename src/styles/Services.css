@@ -47,3 +47,16 @@
         padding: 10px 0;
     }
 }
+
+.services-menu a,
+.services-menu a:visited {
+    color: #333 !important;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.services-menu a:hover {
+    color: #666 !important;
+    text-decoration: underline;
+}

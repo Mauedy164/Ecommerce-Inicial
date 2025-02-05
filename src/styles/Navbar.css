@@ -126,3 +126,27 @@
       width: auto;
   }
 }
+
+/* Quitar estilos por defecto de los links */
+.filter-products-container a,
+.filter-products-container a:visited,
+.cart-link,
+.cart-link:visited {
+    color: #333; /* Color oscuro neutro */
+    text-decoration: none;
+}
+
+/* Efecto hover para los links */
+.filter-products-container a:hover,
+.cart-link:hover {
+    color: #666; /* Color gris para hover */
+    text-decoration: underline;
+}
+
+/* Estilo específico para el título de servicios */
+.services-title {
+    color: #333 !important;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px 0;
+}

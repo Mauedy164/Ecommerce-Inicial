@@ -127,3 +127,13 @@
   color: #4CAF50;
   margin-bottom: 1rem;
 }
+
+a, a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
