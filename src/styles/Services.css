@@ -1,18 +1,18 @@
-
 .services-container {
     position: relative;
+    width: auto;
 }
-
 
 .services-title {
     cursor: pointer;
     user-select: none;
+    margin: 0;
+    padding: 10px 0;
 }
-
 
 .services-menu {
     position: absolute;
-    top: 100%;  /* Aparece justo debajo del texto */
+    top: 100%;
     left: 0;
     background-color: white;
     border: 1px solid #ccc;
@@ -20,12 +20,10 @@
     padding: 10px;
     list-style: none;
     margin: 0;
-    min-width: 200px;  /* Ajusta el ancho según sea necesario */
+    min-width: 200px;
     z-index: 1000;
     font-weight: lighter;
-    user-select: none;
 }
-
 
 .services-item {
     padding: 8px 12px;
@@ -34,4 +32,18 @@
 
 .services-item:hover {
     background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+    .services-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 0;
+        background-color: transparent;
+    }
+
+    .services-item {
+        padding: 10px 0;
+    }
 }

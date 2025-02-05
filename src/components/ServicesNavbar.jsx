@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/Services.css'
 
-export function Services() {
+export function Services({ onItemClick }) {
     const [services, setServices] = useState(false);
 
     return (
         <div className='services-container'>
-            <p className="services-title" onClick={() => { setServices(!services) }}>Servicios🔻</p>
+            <p className="services-title" onClick={() => { setServices(!services) }}>Servicios{services ? '🔺' : '🔻'}</p>
             {services && (
                 <ul className="services-menu">
                     <li className="services-item">
                         <Link
                             to="/CardProductsList?category=Masajes"
-                            onClick={() => setServices(false)}
+                            onClick={() => { setServices(false); onItemClick(); }}
                         >
                             Masajes
                         </Link>
